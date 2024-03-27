@@ -1,0 +1,13 @@
+﻿<h1>This is Home Page</h1>
+
+@{
+    if (User.Identity.IsAuthenticated)
+    {
+        <h1>Hello @User.Identity.Name</h1>
+    }
+    else
+    {
+        <a href="/Home/Login">Please Login</a>
+    }
+    
+}
